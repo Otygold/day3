@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass the message Project.</title>
+</head>
+<style>
+    *{
+        margin: 0;padding:0 ;box-sizing: border-box;
+    }
+    body{
+        background-color: #354e6e;
+    }
+    main{
+        width: 40rem;
+        margin: 8rem auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center; 
+        text-align: center;
+        padding: 20px;
+        position: relative;
+    }
+    .screen{
+        width: 25rem;
+        height: 10rem;
+        background-color:#fff ;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    textarea{
+        border: 2px solid black;
+        padding: 1rem;
+    }
+    button{
+        padding: 5px 15px;
+        border-radius: 20px;
+        background-color: #7597d7;
+        border: none;
+    }
+    .modal{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        color: white;
+        position: absolute;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    .hidden{
+        display: none;
+    }
+    .overlay{
+        position: fixed;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100%;
+        top: 0%;
+    }
+</style>
+<body>
+    <main>
+
+        <div class="screen"></div>
+        <div class="message">
+             <textarea id="yourMessage" cols="50" rows="" placeholder="Type your message here."></textarea><br><br>
+            <button>Submit</button>
+        </div>
+        <div class="overlay hidden"></div>
+        <div class="modal hidden">You have to input something</div>
+    </main>
+    <script src="day3.js"></script>
+</body> 
+</html>
